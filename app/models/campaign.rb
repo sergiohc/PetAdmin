@@ -4,4 +4,6 @@ class Campaign < ApplicationRecord
     title
   end
 
+  validates :title, presence: true
+  validates :body, presence: true
 end

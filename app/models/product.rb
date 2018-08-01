@@ -7,4 +7,7 @@ class Product < ApplicationRecord
   end
 
   belongs_to :supplier
+
+  validates :title, uniqueness: true, presence: true
+  validates :price, presence: true
 end
