@@ -26,7 +26,9 @@ module Fae
     def structure
       [
         item('Manage', subitems: [
-          item('Clients', path: admin_clients_path),
+          item('Clients', subitems: [
+            item('Clients',class: 'custom-class', path: admin_clients_path),
+            item('Adresses', path: admin_addresses_path)]),
           item('Discounts', path: admin_discounts_path),
           item('Suppliers', path: admin_suppliers_path),
           item('Services', path: admin_services_path),
@@ -39,6 +41,5 @@ module Fae
         item('+ Sell', path: '/admin/sells/new')
       ]
     end
-
   end
 end

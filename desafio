@@ -13,3 +13,6 @@ Extras
 1 – Permita que o usuário veja quais clientes receberam o email
 2 – Implemente um sistema para contar quantos usuários abriram o email e mostre essa informação para o usuário
 3 – Permita que o usuário inclua html na hora de criar uma nova campanha (usando: https://github.com/froala/wysiwyg-rails)
+
+
+docker-compose run --rm app bundle exec rails g fae:scaffold Address street:string district:string zipcode:string complement:text city:string state:string client:references 
